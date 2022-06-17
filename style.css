@@ -1,0 +1,27 @@
+body {
+    background-color: #141519;
+    color: #fbfefe;
+}
+
+.style-box {
+    align-self: center;
+    display: block;
+    background-color: #19202a;
+    color: #fbfefe;
+    max-width: 300px;
+}
+
+.submitButton {
+    background-color: #fc7613;
+    color: #fbfefe;
+    border: none;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
