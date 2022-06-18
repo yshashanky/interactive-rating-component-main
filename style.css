@@ -1,23 +1,70 @@
 body {
     background-color: #141519;
     color: #fbfefe;
+    font-family: calibri;
+}
+
+.contentBox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container {
+    width: 100%;
 }
 
 .style-box {
-    align-self: center;
+    text-align: left;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
     background-color: #19202a;
-    color: #fbfefe;
-    max-width: 300px;
+    /* color: #fbfefe; */
+    max-width: 390px;
+    border-radius: 20px;
+    /* position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.staricon {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: #262f38;
+    text-align: center;
+}
+
+.staricon .image {
+    padding-top: 10px;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.h1 {
+    padding-bottom: 0px;
+    margin: 0;
+}
+
+.paragraph {
+    padding-top: 10px;
+    color: #747b85;
 }
 
 .radioButton {
+    padding-top: 20px;
     text-align: center;
 }
 
 .radioButton label {
     display: inline-block;
-    width: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
     padding: 10px;
     border-radius: 120px;
     border: none;
@@ -43,11 +90,13 @@ body {
 }
 
 .submitButton {
-    width: 50%;
+    width: 90%;
+    height: 40px;
     background-color: #fc7613;
     color: #fbfefe;
     border: none;
     border-radius: 30px;
+    margin-top: 20px;
 }
 
 .submitButton:hover{
@@ -57,7 +106,9 @@ body {
 }
 
 .attribution { 
+    padding-top: 20px;
     font-size: 11px; 
+    position: relative;
     text-align: center; 
 }
 
