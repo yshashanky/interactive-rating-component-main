@@ -1,81 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title> Frontend Mentor | Interactive rating component </title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Interactive rating component</title>
 
-</head>
-<body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <!-- Rating state start -->
+  <body id="body">
+    <!-- Rating state start -->
 
-  <div class="style-box">
-    <div class="contentBox">
+    <div id="stylebox" class="style-box">
+      <div class="container">
+        <div class="staricon">
+          <img class="image" src="./images/icon-star.svg" alt="icon-star" />
+        </div>
 
-    
-    <div class="staricon">
-      <img class="image" src="./images/icon-star.svg" alt="icon-star">
+        <h2>How did we do?</h2>
+
+        <p1 class="paragraph">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p1>
+
+        <form class="radioButton">
+          <input type="radio" id="1" name="rating" value="1" />
+          <label id="radiobuttons" for="1">1</label>
+
+          <input type="radio" id="2" name="rating" value="2" />
+          <label id="radiobuttons" for="2">2</label>
+
+          <input type="radio" id="3" name="rating" value="3" />
+          <label id="radiobuttons" for="3">3</label>
+
+          <input type="radio" id="4" name="rating" value="4" />
+          <label id="radiobuttons" for="4">4</label>
+
+          <input type="radio" id="5" name="rating" value="5" />
+          <label id="radiobuttons" for="5">5</label>
+
+          <input
+            type="button"
+            value="SUBMIT"
+            id="button"
+            class="submitButton"
+          />
+        </form>
+      </div>
     </div>
+    <!-- Rating state end -->
 
-    <h1>
-      How did we do?
-    </h1>
-    
-    <p1 class="paragraph">
-      Please let us know how we did with your support request. All feedback is appreciated 
-    to help us improve our offering!
-    </p1>
-    
-
-    <form class="radioButton">
-      <input type="radio" id="1" name="rating" value="1">
-      <label for="1">1</label>
-    
-      <input type="radio" id="2" name="rating" value="2">
-      <label for="2">2</label>
-
-      <input type="radio" id="3" name="rating" value="3">
-      <label for="3">3</label>
-
-      <input type="radio" id="4" name="rating" value="4">
-      <label for="4">4</label>
-
-      <input type="radio" id="5" name="rating" value="5">
-      <label for="5">5</label>
-
-      <!-- <button >Submit</button> -->
-      <input type="submit" class="submitButton" value="SUBMIT">
-    </form>
-  </div>
-  </div>
-
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/yshashanky">Shashank Yadav</a>.
-    </div>
-  </footer>
-
-  <!-- Rating state end -->
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/yshashanky">Shashank Yadav</a>.
+      </div>
+    </footer>
+  </body>
 
   <!-- Thank you state start -->
-<!-- 
-  You selected <Add rating here -> out of 5
+  <script>
+    let btn = document.getElementById("button");
+    let output = document.getElementById("stylebox");
 
-  Thank you!
+    const thankYouState = (rating) => {
+      const htmlText = `<section>
+      <div id="stylebox" class="container">
+        <img
+          class="thankyouicon"
+          src="./images/illustration-thank-you.svg"
+          alt="icon-star"
+        />
+        <br/>
+        <input
+          type="button"
+          value="You selected ${rating} out of 5"
+          class="thankyouRating"
+        />
 
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch! -->
+        <h1>Thank you!</h1>
+
+        <p1 class="thanksParagraph">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p1>
+    </div>
+    </section>`;
+
+      output.innerHTML = htmlText;
+    };
+
+    btn.addEventListener("click", () => {
+      let rates = document.getElementsByName("rating");
+      rates.forEach((rating) => {
+        if (rating.checked) {
+          thankYouState(rating.value);
+        }
+      });
+    });
+  </script>
 
   <!-- Thank you state end -->
-
-  
-</body>
 </html>
