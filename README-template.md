@@ -27,7 +27,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [Code hosted on github](https://github.com/yshashanky/interactive-rating-component-main)
-- Live Site URL: [Live site URL]()
+- Live Site URL: [Live site URL](https://interactive-rating-component-yshashanky.netlify.app/)
 
 ### Built with
 
