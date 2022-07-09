@@ -31,6 +31,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
+- JavaScript
 - Flexbox
 - [Fonts](https://fonts.google.com/specimen/Overpass)
 
