@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" role="pageHTML">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,43 +23,49 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body id="body">
+  <body id="body" role="body">
     <!-- Rating state start -->
 
-    <div id="stylebox" class="style-box">
-      <div class="container">
-        <div class="staricon">
-          <img class="image" src="./images/icon-star.svg" alt="icon-star" />
+    <div id="stylebox" class="style-box" role="stylebox">
+      <div class="container" role="container">
+        <div class="staricon" role="imagecontainer">
+          <img
+            class="image"
+            src="./images/icon-star.svg"
+            alt="icon-star"
+            role="image"
+          />
         </div>
 
-        <h1>How did we do?</h1>
+        <h1 role="heading">How did we do?</h1>
 
-        <p1 class="paragraph">
+        <div class="paragraph" role="paragraph">
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
-        </p1>
+        </div>
 
         <form class="radioButton">
           <input type="radio" id="1" name="rating" value="1" />
-          <label id="radiobuttons" for="1">1</label>
+          <label for="1" role="1">1</label>
 
           <input type="radio" id="2" name="rating" value="2" />
-          <label id="radiobuttons" for="2">2</label>
+          <label for="2" role="2">2</label>
 
           <input type="radio" id="3" name="rating" value="3" />
-          <label id="radiobuttons" for="3">3</label>
+          <label for="3" role="3">3</label>
 
           <input type="radio" id="4" name="rating" value="4" />
-          <label id="radiobuttons" for="4">4</label>
+          <label for="4" role="4">4</label>
 
           <input type="radio" id="5" name="rating" value="5" />
-          <label id="radiobuttons" for="5">5</label>
+          <label for="5" role="5">5</label>
 
           <input
             type="button"
             value="SUBMIT"
             id="button"
             class="submitButton"
+            role="button"
           />
         </form>
       </div>
@@ -67,7 +73,7 @@
     <!-- Rating state end -->
 
     <footer>
-      <div class="attribution">
+      <div class="attribution" role="footer">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
@@ -82,26 +88,28 @@
     let output = document.getElementById("stylebox");
 
     const thankYouState = (rating) => {
-      const htmlText = `<section>
-      <div id="stylebox" class="container">
+      const htmlText = `<section role="thanks">
+      <div id="stylebox2" class="container" role="container">
         <img
           class="thankyouicon"
           src="./images/illustration-thank-you.svg"
           alt="icon-star"
+          role="image"
         />
         <br/>
         <input
           type="button"
           value="You selected ${rating} out of 5"
           class="thankyouRating"
+          role="display"
         />
 
-        <h1>Thank you!</h1>
+        <h1 role="header">Thank you!</h1>
 
-        <p1 class="thanksParagraph">
+        <div class="thanksParagraph" role="thanksparagraph">
           We appreciate you taking the time to give a rating. If you ever need
           more support, don’t hesitate to get in touch!
-        </p1>
+        </div>
     </div>
     </section>`;
 
