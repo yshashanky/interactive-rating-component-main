@@ -19,8 +19,8 @@ Users should be able to:
 
 ![](./images/deployed1.png)
 ![](./images/deployed2.png)
-![](./images/deployed3.png =100x)
-![](./images/deployed4.png =200x)
+![](./images/deployed3.png)
+![](./images/deployed4.png)
 
 ### Links
 
